@@ -37,7 +37,7 @@ test("initial conditions", () => {
 test("when checbox is checked, button should be disabled", () => {
   render(<App />);
 
-  const checkbox = screen.getByRole("checkbox");
+  const checkbox = screen.getByRole("checkbox", { name: "Disable button" });
   const colorButton = screen.getByRole("button", { name: "Change to blue" });
 
   // cb starts unchecked
